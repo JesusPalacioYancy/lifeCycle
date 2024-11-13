@@ -1,7 +1,16 @@
 <p>product works!</p>
 
-<products-price/>
+<products-price
+    *ngIf="isProductVisible"
+    [price]="currenPrice"
+/>
 
 <button
-    (click)="isActive = !isActive"
+    (click)="isProductVisible = !isProductVisible"
 >click me</button>
+
+<button
+    (click)="increasePrice()"
+>+1 price</button>
+
+

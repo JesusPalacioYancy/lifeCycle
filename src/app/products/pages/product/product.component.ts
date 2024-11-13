@@ -12,32 +12,44 @@ export class ProductComponent implements OnInit, OnChanges, DoCheck,
 
   constructor( ) {}
 
-  public isActive: boolean = false
+  public isProductVisible: boolean = false;
+  public currenPrice: number = 10;
 
   ngOnInit(): void {
-    console.log('ngOnInit')
-  }
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log({changes})
-    console.log('ngOnChanges')
-  }
-  ngDoCheck(): void {
-    console.log('ngDoCheck')
-  }
-  ngAfterContentInit(): void {
-    console.log('ngAfterContentInit')
-  }
-  ngAfterContentChecked(): void {
-    console.log('ngAfterContentChecked')
-  }
-  ngAfterViewInit(): void {
-    console.log('ngAfterViewInit')
-  }
-  ngAfterViewChecked(): void {
-    console.log('ngAfterViewChecked')
-  }
-  ngOnDestroy(): void {
-    console.log('ngOnDestroy')
-  }
+    console.log('ngOnInit');
+  };
 
-}
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log({changes});
+    console.log('ngOnChanges');
+  };
+
+  ngDoCheck(): void {
+    console.log('ngDoCheck');
+  };
+
+  ngAfterContentInit(): void {
+    console.log('ngAfterContentInit');
+  };
+
+  ngAfterContentChecked(): void {
+    console.log('ngAfterContentChecked');
+  };
+
+  ngAfterViewInit(): void {
+    console.log('ngAfterViewInit');
+  };
+
+  ngAfterViewChecked(): void {
+    console.log('ngAfterViewChecked');
+  };
+
+  ngOnDestroy(): void {
+    console.log('ngOnDestroy');
+  };
+
+  increasePrice() {
+    this.currenPrice++;
+  };
+
+};
